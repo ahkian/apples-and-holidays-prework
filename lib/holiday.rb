@@ -77,8 +77,8 @@ def all_supplies_in_holidays(holiday_hash)
         end
       end
       str3 << supplies[-1]
-      p str1
-      p str2 + str3
+      puts str1
+      puts str2 + str3
       str2 = ""
       str3 = ""
     end
