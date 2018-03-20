@@ -64,20 +64,17 @@ def all_supplies_in_holidays(holiday_hash)
   str3 = ""
   holiday_hash.each do |season, holidays|
     str1 << season.to_s.capitalize! + ":"
+    puts str1
     holidays.each do |holiday, supplies|
       holiday = holiday.to_s.split("_")
       holiday.each {|word| word.capitalize!}
       holiday = holiday.join(" ").to_s
       str2 << holiday + ": "
-      supplies.each do |el|
-        i = 0
-        while i < supplies.length - 1
-          str3 << supplies[i] + ", "
-          i += 1
-        end
+      if supplies.length == 2
+        1.times{str3 << supplies[0] + ", "}
       end
       str3 << supplies[-1]
-      puts str1
+
       puts "  " + str2 + str3
       str2 = ""
       str3 = ""
