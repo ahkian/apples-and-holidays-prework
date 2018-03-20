@@ -74,7 +74,6 @@ def all_supplies_in_holidays(holiday_hash)
         while i < supplies.length - 1
           str3 << supplies[i] + ", "
           i += 1
-          str3 = str3.split(", ").uniq.join(, )
         end
       end
       str3 << supplies[-1]
